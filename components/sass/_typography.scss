@@ -1,0 +1,111 @@
+/* =Typography
+------------------------------------------------------------------- */
+
+small{
+    font-size: 85%;
+}
+
+p{
+    margin: 0 0 14px;
+}
+
+img{
+    margin-bottom: 14px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    line-height: 20px;
+    margin: 10px 0;
+    font-weight: 700;
+    text-rendering: optimizelegibility;
+}
+
+h1, h2, h3{
+    line-height: 40px;
+}
+
+h1{ font-size: 38px; }
+h2{ font-size: 32px; }
+h3{ font-size: 24px; }
+h4{ font-size: 18px; }
+h4{ font-size: 14px; }
+h6{ font-size: 12px; }
+
+blockquote{
+    @extend .clearfix;
+    border-left: 5px solid #eee;
+    padding: 0 0 0 15px;
+    margin-bottom: 5px;
+
+    p{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.25;
+        margin-bottom: 0;
+    }
+
+    small{
+        color: #999;
+        display: block;
+        line-height: 20px;
+
+        &:before{
+            content: "— ";
+        }
+    }
+
+    cite{
+        font-style: normal;
+    }
+}
+
+table{
+    border: 1px solid #f0f0f0;
+    margin: 10px 0;
+    text-align: left;
+    width: 100%;
+    font-size: 1.2em;
+
+    th{ font-weight: bold; }
+
+    tr td, th{
+        border: 1px solid #eee;
+        padding: 5px 20px;
+    }
+}
+
+ol{
+    font-size: 14px;
+    padding: 0 0 0 25px;
+
+    li{
+        list-style: decimal outside;
+    }
+}
+
+ul{
+    padding: 0 0 0 25px;
+    font-size: 14px;
+
+    li{ list-style: disc; }
+}
+
+li { margin: 5px 0 5px 10px; }
+
+sup{ bottom: 1ex; }
+sub{ top: 0.5ex; }
+
+sup, sub{
+    font-size: 0.8em;
+    height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+abbr, acronym{
+    border-bottom: 1px dotted #666;
+    cursor: help;
+}
+
+pre, code{
+    font: 90%/140% Inconsolata,monospace
+}

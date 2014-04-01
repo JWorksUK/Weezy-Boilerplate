@@ -1,0 +1,71 @@
+/* =Grid
+------------------------------------------------------------------- */
+
+// Default 940px grid
+// -------------------------
+$gridColumns            : 12;
+$gridColumnWidth        : 60px;
+$gridGutterWidth        : 20px;
+$gridRowWidth           : ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
+
+@mixin column ($columns: 1) {
+    width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+    float:left;
+    margin:$gridGutterWidth / 2;
+    position:relative;
+}
+
+@mixin offset ($columns: 1) {
+    margin-left:($gridColumnWidth * $columns) + ($gridGutterWidth * $columns) + ($gridGutterWidth * 0.5);
+}
+
+@mixin push ($columns: 1) {
+    margin-right:($gridColumnWidth * $columns) + ($gridGutterWidth * $columns) + ($gridGutterWidth * 0.5);
+}
+
+.wrap{
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 960px;
+    @extend .clearfix;
+}
+
+.grid1{ @include column(1); }
+.grid2{ @include column(2); }
+.grid3{ @include column(3); }
+.grid4{ @include column(4); }
+.grid5{ @include column(5); }
+.grid6{ @include column(6); }
+.grid7{ @include column(7); }
+.grid8{ @include column(8); }
+.grid9{ @include column(9); }
+.grid10{ @include column(10); }
+.grid11{ @include column(11); }
+.grid12{ @include column(12); }
+
+// Offsets
+.offset1{ @include offset(1); }
+.offset2{ @include offset(2); }
+.offset3{ @include offset(3); }
+.offset4{ @include offset(4); }
+.offset5{ @include offset(5); }
+.offset6{ @include offset(6); }
+.offset7{ @include offset(7); }
+.offset8{ @include offset(8); }
+.offset9{ @include offset(9); }
+.offset10{ @include offset(10); }
+.offset11{ @include offset(11); }
+
+// Pushoffs
+.pad1{ @include push(1); }
+.pad2{ @include push(2); }
+.pad3{ @include push(3); }
+.pad4{ @include push(4); }
+.pad5{ @include push(5); }
+.pad6{ @include push(6); }
+.pad7{ @include push(7); }
+.pad8{ @include push(8); }
+.pad9{ @include push(9); }
+.pad10{ @include push(10); }
+.pad11{ @include push(11); }

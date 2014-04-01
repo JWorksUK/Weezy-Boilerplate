@@ -1,0 +1,65 @@
+@import "reset";
+@import "_typography";
+@import "_grid";
+@import "_mixins";
+
+/*
+BASE
+------------------------------------------------------------------- */
+
+$white      : #ffffff;
+$black      : #000000;
+$darkgrey   : #333333;
+$grey       : #cccccc;
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    @extend .hel-serif;
+    position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: left;
+    background: $white;
+    color: $black;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    &:hover, &:active, &:focus{
+        outline:none;
+    }
+}
+
+/*
+TYPOGRAPHY
+------------------------------------------------------------------- */
+
+.hel-serif {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.serif {
+    font-family: 'Helvetica', 'Arial', 'Verdana', sans-serif;
+}
+
+.sans-serif {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-style: italic;
+}
+
+/*
+HEADER
+----------------------------------------------------------------------------- */
+
+/*
+FOOTER
+----------------------------------------------------------------------------- */
