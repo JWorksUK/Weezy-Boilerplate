@@ -21,6 +21,17 @@
             transform: scale($x, $y);
 }
 
+@mixin box-shadow ($shadows...) {
+    -webkit-box-shadow: $shadows;
+       -moz-box-shadow: $shadows;
+            box-shadow: $shadows;
+}
+
+@mixin text-shadow ($x: 0, $y: 0, $blur: 1px, $color: #000) {
+    text-shadow: $arguments;
+    filter: dropshadow(color=$color, offx=$x, offy=$y);
+}
+
 /* Text Offset - for screen readers and SEO */
 /************************/
 
