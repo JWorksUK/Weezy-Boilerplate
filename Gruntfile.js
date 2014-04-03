@@ -32,7 +32,7 @@ module.exports = function(grunt){
                 separator: ';'
             },
             dist: {
-                src: ['components/bower_components/jquery/jquery.js', 'components/js/**/*.js'],
+                src: ['bower_components/jquery/jquery.js', 'components/js/**/*.js'],
                 dest: 'www/assets/js/site.min.js'
             }
         },
