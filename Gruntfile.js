@@ -25,7 +25,7 @@ module.exports = function(grunt){
             }
         },
         jshint: {
-            uses_defaults: ['components/js/site.js']
+            build: ['components/js/site.js']
         },
         concat: {
             options: {
@@ -80,7 +80,7 @@ module.exports = function(grunt){
     });
 
     grunt.registerTask('default',   []);
+    grunt.registerTask('build',     ['buildcss', 'buildjs']);
     grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
     grunt.registerTask('buildjs',   ['jshint', 'concat', 'uglify']);
-    grunt.registerTask('build',     ['buildcss', 'buildjs']);
 };
