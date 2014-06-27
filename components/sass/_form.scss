@@ -1,0 +1,42 @@
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    display: block;
+    width: 100%;
+    height: $line-height;
+    padding: 5px;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $black;
+    background-color: $white;
+    border: 1px solid $grey;
+    @include rounded-corners(3px);
+    margin: 0 0 $line-height 0;
+    @extend .hel-serif;
+}
+
+textarea {
+    height: auto;
+}
+
+input[type="submit"],
+button {
+    height: $line-height + 10px + 2px;
+    line-height: $line-height;
+    background: $lightgrey;
+    border: 0;
+    padding: 0 10px;
+    color: $black;
+    font-size: $font-size;
+    border: 1px solid $grey;
+    @include rounded-corners(3px);
+    margin: 0 0 $line-height 0;
+    @extend .hel-serif;
+}

@@ -6,11 +6,11 @@ small{
 }
 
 p{
-    margin: 0 0 14px;
+    margin: 0 0 $line-height;
 }
 
 img{
-    margin-bottom: 14px;
+    margin-bottom: $line-height;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -33,9 +33,9 @@ h6{ font-size: 12px; }
 
 blockquote{
     @extend .clearfix;
-    border-left: 5px solid #eee;
+    border-left: 5px solid $grey;
     padding: 0 0 0 15px;
-    margin-bottom: 5px;
+    margin-bottom: $line-height;
 
     p{
         font-weight: 300;
@@ -45,7 +45,7 @@ blockquote{
     }
 
     small{
-        color: #999;
+        color: $grey;
         display: block;
         line-height: 20px;
 
@@ -60,11 +60,10 @@ blockquote{
 }
 
 table{
-    border: 1px solid #f0f0f0;
+    border: 1px solid $grey;
     margin: 10px 0;
     text-align: left;
     width: 100%;
-    font-size: 1.2em;
 
     th{ font-weight: bold; }
 
@@ -104,6 +103,24 @@ abbr, acronym{
     cursor: help;
 }
 
-pre, code{
-    font: 90%/140% Inconsolata,monospace
+code, pre {
+    background-color: $lightgrey;
+    border: 1px solid $grey;
+    border-radius: 3px;
+    color: $black;
+    font-family: Inconsolata,monospace;
+    font-size: 12px;
+    padding: 0 3px;
+}
+
+pre {
+    padding: 5px 12px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+
+    code {
+        border: 0 none !important;
+        padding: 0;
+    }
 }

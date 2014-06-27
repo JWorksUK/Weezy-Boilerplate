@@ -1,17 +1,21 @@
+$white      : #ffffff;
+$black      : #000000;
+$darkgrey   : #333333;
+$grey       : #cccccc;
+$lightgrey  : #f8f8f8;
+
+$line-height: 20px;
+$font-size  : 14px;
+
+@import "_mixins";
 @import "reset";
 @import "_typography";
 @import "_grid";
-@import "_mixins";
 @import "_form";
 
 /*
 BASE
 ------------------------------------------------------------------- */
-
-$white      : #ffffff;
-$black      : #000000;
-$darkgrey   : #333333;
-$grey       : #cccccc;
 
 html {
     -webkit-text-size-adjust: none;
@@ -20,8 +24,8 @@ html {
 body {
     @extend .hel-serif;
     position: relative;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: $font-size;
+    line-height: $line-height;
     font-style: normal;
     font-weight: 400;
     text-transform: none;
@@ -65,3 +69,18 @@ HEADER
 /*
 FOOTER
 ----------------------------------------------------------------------------- */
+
+
+/* DELETE  THIS */
+.gridsystem h2{
+    margin-left:10px;
+}
+
+.gridsystem > div{
+    background:$lightgrey;
+    color:#601286;
+    padding:20px 0;
+    text-align:center;
+    text-shadow:0,1px,0,rgba(255, 255, 255, 0.2);
+    @include rounded-corners(5px);
+}
