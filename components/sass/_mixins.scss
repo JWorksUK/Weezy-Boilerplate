@@ -32,6 +32,12 @@
     filter: dropshadow(color=$color, offx=$x, offy=$y);
 }
 
+@mixin media-query($height, $low) {
+    @media screen and (max-width:$height) and (min-width:$low + 1) {
+        @content;
+    }
+}
+
 /* Text Offset - for screen readers and SEO */
 /************************/
 
