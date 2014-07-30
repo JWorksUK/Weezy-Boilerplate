@@ -5,7 +5,6 @@ syntax: glob
 node_modules
 .sass-cache
 
-components/bower_components
 bower_components
 
 npm-debug.log
