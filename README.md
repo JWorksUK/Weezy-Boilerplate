@@ -1,5 +1,5 @@
-Page Name
-=========
+Weezy Boilerplate
+=================
 
 ##Getting started
 

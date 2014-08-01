@@ -1,0 +1,19 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+/* MAIN */
+  Developer: Jesse James
+  Twitter: @jworksuk
+  Site: http://www.jworksuk.com
+
+/* SITE */
+  Last update: 01/08/2014
+  Doctype: HTML5
+  IDE: Sublime Text 2
+
+/* SPECIAL THANKS */
+  {{ role }}: {{ name }}
+  Twitter: {{ @username }}
+
+  And, of course, all humanstxt.org team!
+

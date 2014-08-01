@@ -7,7 +7,7 @@ module.exports = function(grunt){
         sass: {
             build: {
                 files: {
-                    'www/assets/css/style.min.css': 'components/sass/style.scss'
+                    'www/assets/css/style.min.css': 'components/scss/style.scss'
                 }
             }
         },
@@ -73,7 +73,7 @@ module.exports = function(grunt){
                 tasks: ['buildjs']
             },
             css: {
-                files: ['components/sass/**/*.scss'],
+                files: ['components/scss/**/*.scss'],
                 tasks: ['buildcss']
             }
         }
