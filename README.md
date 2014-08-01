@@ -3,7 +3,7 @@ Weezy Boilerplate
 
 A blank site.
 
-##Getting started
+## Getting started
 
 install grunt & bower
 
@@ -43,3 +43,18 @@ Change the ```name``` of the package in the ```bower.json``` file
 ```
 
 Edit ```www/humans.txt``` update project details.
+
+
+## Grunt
+
+### Watch
+Watchs scss and js files for changes and compiles
+```dash
+$ grunt watch
+```
+
+### Build
+Builds css and js files
+```dash
+$ grunt build
+```
