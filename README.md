@@ -7,13 +7,13 @@ A blank site.
 
 install grunt & bower
 
-```dash
+```bash
 $ npm install -g grunt-cli bower
 ```
 
 Install Grunt dependencies
 
-```dash
+```bash
 $ npm install && bower install
 ```
 
@@ -49,12 +49,12 @@ Edit ```www/humans.txt``` update project details.
 
 ### Watch
 Watchs scss and js files for changes and compiles
-```dash
+```bash
 $ grunt watch
 ```
 
 ### Build
 Builds css and js files
-```dash
+```bash
 $ grunt build
 ```
