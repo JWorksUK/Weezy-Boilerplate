@@ -20,6 +20,10 @@ module.exports = function(grunt){
         },
         cssmin: {
             build: {
+                options: {
+                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
+                        '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                },
                 src: 'www/assets/css/style.min.css',
                 dest: 'www/assets/css/style.min.css'
             }
@@ -29,10 +33,13 @@ module.exports = function(grunt){
         },
         concat: {
             options: {
-                separator: ';'
+                separator: ';\n\n'
             },
             dist: {
-                src: ['bower_components/jquery/jquery.js', 'components/js/**/*.js'],
+                src: [
+                    'bower_components/jquery/jquery.js',
+                    'components/js/**/*.js'
+                ],
                 dest: 'www/assets/js/site.min.js'
             }
         },
@@ -40,7 +47,7 @@ module.exports = function(grunt){
             build: {
                 options: {
                     banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                        '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                        '<%= grunt.template.today("yyyy-mm-dd") %> */\n'
                 },
                 files: {
                     'www/assets/js/site.min.js': ['www/assets/js/site.min.js']
