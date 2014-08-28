@@ -8,11 +8,9 @@
     },
     "devDependencies" : {
         "grunt" :                       "*",
-        "grunt-contrib-cssmin":         "*",
         "grunt-contrib-sass":           "*",
         "grunt-contrib-uglify":         "*",
         "grunt-contrib-watch":          "*",
-        "grunt-cssc":                   "*",
         "grunt-htmlhint":               "*",
         "grunt-contrib-concat":         "*",
         "grunt-contrib-jshint":         "*",

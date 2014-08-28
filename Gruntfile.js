@@ -2,30 +2,37 @@ module.exports = function(grunt){
     "use strict";
     require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
 
+    var projectConfig = {
+        banner : '/*!\n'+
+            ' *  <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+            ' */',
+        js_files : [
+            'bower_components/jquery/jquery.min.js',
+            'components/js/**/*.js'
+        ]
+    };
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
-            build: {
+            options: {
+                banner: projectConfig.banner
+            },
+            minified: {
+                options: {
+                    style: 'compressed'
+                },
                 files: {
                     'www/assets/css/style.min.css': 'components/scss/style.scss'
                 }
-            }
-        },
-        cssc: {
-            build: {
-                files: {
-                    'www/assets/css/style.min.css': 'www/assets/css/style.min.css'
-                }
-            }
-        },
-        cssmin: {
-            build: {
+            },
+            normal: {
                 options: {
-                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                        '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                    style: 'expanded'
                 },
-                src: 'www/assets/css/style.min.css',
-                dest: 'www/assets/css/style.min.css'
+                files: {
+                    'www/assets/css/style.css': 'components/scss/style.scss'
+                }
             }
         },
         jshint: {
@@ -35,19 +42,22 @@ module.exports = function(grunt){
             options: {
                 separator: ';\n\n'
             },
-            dist: {
-                src: [
-                    'bower_components/jquery/jquery.js',
-                    'components/js/**/*.js'
-                ],
+            minified: {
+                src: projectConfig.js_files,
                 dest: 'www/assets/js/site.min.js'
+            },
+            normal:  {
+                options: {
+                    banner: projectConfig.banner
+                },
+                src: projectConfig.js_files,
+                dest: 'www/assets/js/site.js'
             }
         },
         uglify: {
             build: {
                 options: {
-                    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-                        '<%= grunt.template.today("yyyy-mm-dd") %> */\n'
+                    banner: projectConfig.banner
                 },
                 files: {
                     'www/assets/js/site.min.js': ['www/assets/js/site.min.js']
@@ -88,6 +98,6 @@ module.exports = function(grunt){
 
     grunt.registerTask('default',   []);
     grunt.registerTask('build',     ['buildcss', 'buildjs']);
-    grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
+    grunt.registerTask('buildcss',  ['sass']);
     grunt.registerTask('buildjs',   ['jshint', 'concat', 'uglify']);
 };
