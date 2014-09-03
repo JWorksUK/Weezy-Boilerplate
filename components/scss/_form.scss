@@ -45,4 +45,6 @@ button {
     @include rounded-corners(3px);
     margin: 0 0 $line-height 0;
     @extend .hel-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
