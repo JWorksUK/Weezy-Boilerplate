@@ -14,6 +14,7 @@
         "grunt-htmlhint":               "*",
         "grunt-contrib-concat":         "*",
         "grunt-contrib-jshint":         "*",
+        "grunt-browser-sync":           "*",
         "matchdep":                     "*"
     }
 }

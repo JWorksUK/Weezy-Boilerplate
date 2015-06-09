@@ -15,9 +15,9 @@ module.exports = function(grunt){
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
-            options: {
-                banner: projectConfig.banner
-            },
+            // options: {
+            //     banner: projectConfig.banner
+            // },
             minified: {
                 options: {
                     style: 'compressed'
@@ -80,6 +80,20 @@ module.exports = function(grunt){
                 src: ['www/index.html']
             }
         },
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        'www/assets/css/*.css',
+                        'www/assets/js/*.js'
+                    ]
+                },
+                options: {
+                    watchTask: true,
+                    server: './www'
+                }
+            }
+        },
         watch: {
             html: {
                 files: ['www/index.html'],
@@ -96,7 +110,7 @@ module.exports = function(grunt){
         }
     });
 
-    grunt.registerTask('default',   []);
+    grunt.registerTask('default',   ['browserSync', 'watch']);
     grunt.registerTask('build',     ['buildcss', 'buildjs']);
     grunt.registerTask('buildcss',  ['sass']);
     grunt.registerTask('buildjs',   ['jshint', 'concat', 'uglify']);
