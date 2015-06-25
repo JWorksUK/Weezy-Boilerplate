@@ -2,6 +2,9 @@
     "name": "WeezyBoilerplate",
     "version": "1.0.0",
     "dependencies": {
+        "modernizr": "~2.8.1",
+        "bourbon": "~4.2.2",
+        "neat": "~1.7.2",
         "jquery": "~1.10.2"
     }
 }

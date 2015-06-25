@@ -1,0 +1,13 @@
+@import "../../../bower_components/neat/app/assets/stylesheets/neat-helpers.scss";
+
+/* Grid
+----------------------------------------------------------------------------- */
+// Change the grid settings
+
+$column: 70px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1170px;
+
+// $_1025: new-breakpoint(min-width 1025px 12);
+

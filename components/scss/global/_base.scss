@@ -1,0 +1,35 @@
+/*
+BASE
+----------------------------------------------------------------------------- */
+
+html {
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    @extend %open-sans;
+    position: relative;
+    font-size: $fontSizeDelta;
+    line-height: $line-height;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    text-align: left;
+    background: $white;
+    color: $black;
+    margin: 0;
+    padding: 0 $gutter / 2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: inherit;
+
+    &:hover, &:active, &:focus{
+        outline:none;
+    }
+}
+
+

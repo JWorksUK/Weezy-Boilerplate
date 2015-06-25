@@ -1,106 +1,18 @@
-$white      : #ffffff;
-$black      : #000000;
-$darkgrey   : #333333;
-$grey       : #cccccc;
-$lightgrey  : #f8f8f8;
+// bower
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon";
+@import "global/grid-settings";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat";
 
-$line-height: 20px;
-$font-size  : 14px;
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
 
-@import "_mixins";
-@import "reset";
-@import "_typography";
-@import "_grid";
-@import "_form";
+// global
+@import "global/reset";
+@import "global/variables";
+@import "global/mixins";
+@import "global/typography";
+@import "global/base";
+@import "global/form";
 
-/*
-BASE
-------------------------------------------------------------------- */
-
-html {
-    -webkit-text-size-adjust: none;
-}
-
-body {
-    @extend .hel-serif;
-    position: relative;
-    font-size: $font-size;
-    line-height: $line-height;
-    font-style: normal;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: normal;
-    text-align: left;
-    background: $white;
-    color: $black;
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-    &:hover, &:active, &:focus{
-        outline:none;
-    }
-}
-
-/*
-TYPOGRAPHY
-------------------------------------------------------------------- */
-
-.hel-serif {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-}
-
-.serif {
-    font-family: 'Helvetica', 'Arial', 'Verdana', sans-serif;
-}
-
-.sans-serif {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-style: italic;
-}
-
-/*
-HEADER
------------------------------------------------------------------------------ */
-
-/*
-FOOTER
------------------------------------------------------------------------------ */
-
-/*
-RESPONSIVE
------------------------------------------------------------------------------ */
-
-$tablet: 768px;
-$mobile: 480px;
-
-@include media-query($tablet, $mobile) {
-    body {
-        background-color: #1abc9c;
-    }
-}
-
-@include media-query($mobile, 0) {
-    body {
-        background-color: #2ecc71;
-    }
-}
-
-
-
-/* DELETE  THIS */
-.gridsystem h2{
-    margin-left:10px;
-}
-
-.gridsystem > div{
-    background:$lightgrey;
-    color:#601286;
-    padding:20px 0;
-    text-align:center;
-    text-shadow:0,1px,0,rgba(255, 255, 255, 0.2);
-    @include rounded-corners(5px);
-}
+// pages
+@import "pages/home";

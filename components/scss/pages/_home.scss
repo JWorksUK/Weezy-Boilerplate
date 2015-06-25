@@ -1,0 +1,50 @@
+/*
+HOME
+----------------------------------------------------------------------------- */
+
+.wrap{
+    @include outer-container;
+}
+
+.grid1{ @include span-columns(1); }
+.grid2{ @include span-columns(2); }
+.grid3{ @include span-columns(3); }
+.grid4{ @include span-columns(4); }
+.grid5{ @include span-columns(5); }
+.grid6{ @include span-columns(6); }
+.grid7{ @include span-columns(7); }
+.grid8{ @include span-columns(8); }
+.grid9{ @include span-columns(9); }
+.grid10{ @include span-columns(10); }
+.grid11{ @include span-columns(11); }
+.grid12{ @include span-columns(12); }
+
+// Offsets
+.offset1{ @include shift(1); }
+.offset2{ @include shift(2); }
+.offset3{ @include shift(3); }
+.offset4{ @include shift(4); }
+.offset5{ @include shift(5); }
+.offset6{ @include shift(6); }
+.offset7{ @include shift(7); }
+.offset8{ @include shift(8); }
+.offset9{ @include shift(9); }
+.offset10{ @include shift(10); }
+.offset11{ @include shift(11); }
+
+
+.gridsystem {
+    .grids {
+        margin-bottom: 20px;
+        @include row;
+
+        div {
+            background:$black;
+            color:$white;
+            padding:20px 0;
+            text-align:center;
+            @include rounded-corners(5px);
+        }
+    }
+}
+

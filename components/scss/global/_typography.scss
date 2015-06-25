@@ -1,5 +1,46 @@
-/* =Typography
-------------------------------------------------------------------- */
+/*
+FONT FAMILIES
+----------------------------------------------------------------------------- */
+
+%open-sans {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*
+HEADINGS
+----------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+    text-rendering: optimizelegibility;
+}
+
+// h1, h2, h3 {
+//     line-height: 40px;
+// }
+
+// h4, h5, h6 {
+//     line-height: 20px;
+// }
+
+h1{ font-size: $fontSizeAlpha; }
+h2{ font-size: $fontSizeBravo; }
+h3{ font-size: $fontSizeCharlie; }
+h4{ font-size: $fontSizeDelta; }
+h4{ font-size: $fontSizeEcho; }
+h6{ font-size: $fontSizeFoxtrot; }
+
+.section-title {
+    text-transform: uppercase;
+}
+
+.display-title {
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: $fontSizeAlpha;
+}
 
 small{
     font-size: 85%;
@@ -13,23 +54,7 @@ img{
     margin-bottom: $line-height;
 }
 
-h1, h2, h3, h4, h5, h6{
-    line-height: 20px;
-    margin: 10px 0;
-    font-weight: 700;
-    text-rendering: optimizelegibility;
-}
 
-h1, h2, h3{
-    line-height: 40px;
-}
-
-h1{ font-size: 38px; }
-h2{ font-size: 32px; }
-h3{ font-size: 24px; }
-h4{ font-size: 18px; }
-h4{ font-size: 14px; }
-h6{ font-size: 12px; }
 
 blockquote{
     @extend .clearfix;
